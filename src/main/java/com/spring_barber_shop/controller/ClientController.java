@@ -1,14 +1,14 @@
 package com.spring_barber_shop.controller;
 
-import br.com.dio.barbershopui.controller.request.SaveClientRequest;
-import br.com.dio.barbershopui.controller.request.UpdateClientRequest;
-import br.com.dio.barbershopui.controller.response.ClientDetailResponse;
-import br.com.dio.barbershopui.controller.response.ListClientResponse;
-import br.com.dio.barbershopui.controller.response.SaveClientResponse;
-import br.com.dio.barbershopui.controller.response.UpdateClientResponse;
-import br.com.dio.barbershopui.mapper.IClientMapper;
-import br.com.dio.barbershopui.service.IClientService;
-import br.com.dio.barbershopui.service.query.IClientQueryService;
+
+import com.spring_barber_shop.controller.request.SaveClientRequest;
+import com.spring_barber_shop.controller.request.UpdateClientRequest;
+import com.spring_barber_shop.controller.response.ClientDetailResponse;
+import com.spring_barber_shop.controller.response.ListClientResponse;
+import com.spring_barber_shop.controller.response.SaveClientResponse;
+import com.spring_barber_shop.controller.response.UpdateClientResponse;
+import com.spring_barber_shop.mapper.IClientMapper;
+import com.spring_barber_shop.service.impl.query.IClientQueryService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -31,7 +31,7 @@ import static org.springframework.http.HttpStatus.NO_CONTENT;
 @AllArgsConstructor
 public class ClientController {
 
-    private final IClientService service;
+    private final IClientQueryService service;
     private final IClientQueryService queryService;
     private final IClientMapper mapper;
 

@@ -3,6 +3,8 @@ package com.spring_barber_shop.controller;
 import com.spring_barber_shop.controller.request.SaveScheduleRequest;
 import com.spring_barber_shop.controller.response.SaveScheduleResponse;
 import com.spring_barber_shop.controller.response.ScheduleAppointmentMonthResponse;
+import com.spring_barber_shop.mapper.IScheduleMapper;
+import com.spring_barber_shop.service.impl.query.IScheduleQueryService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -25,7 +27,7 @@ import static org.springframework.http.HttpStatus.NO_CONTENT;
 @AllArgsConstructor
 public class ScheduleController {
 
-    private final IScheduleService service;
+    private final IScheduleQueryService service;
     private final IScheduleQueryService queryService;
     private final IScheduleMapper mapper;
 
